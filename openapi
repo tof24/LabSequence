@@ -1,0 +1,43 @@
+---
+openapi: 3.1.0
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+paths:
+  /labseq/{n}:
+    get:
+      summary: Get LabSeq value
+      description: Calculate the LabSeq sequence value for a non-negative integer
+        n.
+      parameters:
+      - description: Non-negative integer index
+        name: "n"
+        required: true
+        schema:
+          type: integer
+          format: int32
+          minimum: 0
+        in: path
+      responses:
+        "200":
+          description: Successfully calculated l(n)
+          content:
+            application/json:
+              schema:
+                type: integer
+                format: int64
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+      - Lab Seq Resource
+info:
+  title: code-with-quarkus API
+  version: 1.0.0-SNAPSHOT

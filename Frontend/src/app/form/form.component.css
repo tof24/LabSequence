@@ -1,0 +1,90 @@
+.container {
+    width: 320px;              /* Fixed width to mimic the box */
+    margin: 5rem auto;         /* Center horizontally + top margin */
+    padding: 2rem;
+    background-color: #ededed;    /* White form box */
+    border: 2px solid #222222;  
+    border-radius: 4px;  /* Black border like in the image */
+          /* Center text */
+  }
+  
+  .center h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;         /* "Give it a try" style */
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+    text-align: left;          /* Align label/input left */
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #222222;
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
+    background-color: #222222;
+    font-weight: 600;
+    color: #ededed;
+    border: none;
+    border-radius: 2px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  .result-container, .error-container {
+    margin-top: 1rem;
+  }
+
+  .result-text{
+    color: #222222;
+    font-weight: 600;
+  }
+
+  .result-div {
+    min-height: 30px; /* Changed from min-height to max-height */
+    max-height: 60px; /* Changed from min-height to max-height */
+    overflow-y: auto; /* Add vertical scroll when content exceeds height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    word-break: break-all; /* Break long numbers to prevent horizontal overflow */
+    padding: 5px; /* Add some padding for better appearance */
+    border-bottom: 1px solid #222222;
+    margin-bottom: 50px;
+    
+}
+
+.error-message{
+  color: red;
+}
+
+
+/* For Chrome, Edge, Safari */
+.result-div::-webkit-scrollbar {
+  width: 6px; /* vertical scrollbar width */
+  height: 6px; /* horizontal scrollbar height */
+}
+
+.result-div::-webkit-scrollbar-track {
+  background: #ededed;
+  border-radius: 2px;
+}
+
+.result-div::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 2px;
+}
+
+.form-style{
+  min-height: 30px;
+  margin-top:10px ;
+}

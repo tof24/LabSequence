@@ -1,0 +1,53 @@
+
+
+
+.labseq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 10vw;
+    color: #222222;
+    
+  }
+  
+  /* Switch to single column on smaller screens */
+  @media (max-width: 1250px) {
+    .labseq-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .labseq-info {
+    flex: 1;
+    max-width: 100%;
+    margin-right: 2rem;
+  }
+  
+  .labseq-form {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .no-margin{
+    margin: 0;
+  }
+
+  .title{
+    font-size: 5vh;
+  }
+
+  .subtitle{
+    margin-bottom: 5px;
+    font-size: 1.7vh;
+  }
+
+  .numbers{
+    margin-top: 5px;
+    letter-spacing: .4rem;
+  }
+
+
+  .alignment{
+    padding-right: 2px;
+    padding-left: 2px;
+  }

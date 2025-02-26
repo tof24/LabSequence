@@ -1,0 +1,48 @@
+<div class="container">
+    <div>
+      <h2 style="font-size: 38px;">Give it a try!</h2>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label for="n">Enter a number:</label>
+          <input 
+            formControlName="number" 
+            placeholder="l(n)"
+            id="n" 
+            type="number"
+            [class.error]="form.get('number')?.invalid && form.get('number')?.touched"
+          >
+        </div>
+        <div style="text-align: right;">
+            <button 
+            type="submit" 
+            class="submit-btn"
+            [disabled]="form.invalid"
+            >
+            Submit
+            </button>
+        </div>
+      </form>
+
+      <div class="form-style">
+        <div *ngIf="form.get('number')?.errors?.['min']" class="error-message">
+          The integer must be positive
+        </div>
+        <div *ngIf="form.get('number')?.errors?.['max']" class="error-message">
+          n exceeds maximum allowed value (max: {{ MAX_ALLOWED }})
+        </div>
+      </div>
+
+      <div class="result-container">
+        <p class="result-text">The result</p>
+        
+        <div class="result-div">
+            {{ result }}
+        </div>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-container">
+        <p class="error-text">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
